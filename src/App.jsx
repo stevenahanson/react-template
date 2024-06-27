@@ -25,6 +25,16 @@ function App() {
     return `${month} ${day}`;
   }
 
+  function formatCurrency(amount) {
+    let amountToString = amount.toString().replace("..", ".");
+
+    let [pounds, pence] = amountToString.split(".");
+
+    pence = pence ? pence.padEnd(2, "0") : "00";
+
+    return `£${pounds}.${pence}`;
+  }
+
   return (
     <div id="template-text">
       <h1>Expenses</h1>
@@ -42,7 +52,7 @@ function App() {
           <tr key={item.id}>
             <td>{formatDate(item.date)}</td>
             <td>{item.merchant}</td>
-            <td>{item.amount}</td>
+            <td>{formatCurrency(item.amount)}</td>
             <td>{item.category}</td>
             <td>{item.description}</td>
             <td>{item.status}</td>
