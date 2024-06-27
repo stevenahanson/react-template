@@ -68,3 +68,7 @@ h6 {
   margin: 20px;
   padding: 0;
 }
+
+#divider {
+  border-bottom: 1px solid #ccc;
+}
