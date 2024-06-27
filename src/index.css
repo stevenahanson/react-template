@@ -72,3 +72,16 @@ h6 {
 #divider {
   border-bottom: 1px solid #ccc;
 }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  text-align: center; 
+  padding: 8px; 
+}
+
+.table th {
+  padding-top: 20px;
+}
