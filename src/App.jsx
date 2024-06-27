@@ -17,6 +17,13 @@ function App() {
     getExpenses();
   }, []);
 
+  function formatDate(date) {
+    const currentDate = new Date(date);
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const month = monthNames[currentDate.getMonth()];
+    const day = currentDate.getDate();
+    return `${month} ${day}`;
+  }
 
   return (
     <div id="template-text">
@@ -33,7 +40,7 @@ function App() {
         </tr>
         {data && data.map((item) => (
           <tr key={item.id}>
-            <td>{item.date}</td>
+            <td>{formatDate(item.date)}</td>
             <td>{item.merchant}</td>
             <td>{item.amount}</td>
             <td>{item.category}</td>
