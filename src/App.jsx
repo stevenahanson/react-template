@@ -31,6 +31,16 @@ function App() {
           <th>Description</th>
           <th>Status</th>
         </tr>
+        {data && data.map((item) => (
+          <tr key={item.id}>
+            <td>{item.date}</td>
+            <td>{item.merchant}</td>
+            <td>{item.amount}</td>
+            <td>{item.category}</td>
+            <td>{item.description}</td>
+            <td>{item.status}</td>
+          </tr>
+        ))}
       </table>
     </div>
   );
