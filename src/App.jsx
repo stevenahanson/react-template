@@ -3,11 +3,16 @@ function App() {
     <div id="template-text">
       <h1>Expenses</h1>
       <div id="divider"></div>
-      <p>
-        For TypeScript please use{" "}
-        <a href="https://github.com/ruairidhflint/react-template-ts">this</a>{" "}
-        template
-      </p>
+      <table className="table">
+        <tr>
+          <th>Date</th>
+          <th>Merchant</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+      </table>
     </div>
   );
 }
